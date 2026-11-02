@@ -1,0 +1,23 @@
+// RAG ilustrasi deadlock: tiga proses menunggu melingkar
+digraph RAG_Deadlock {
+  graph [layout=circo, mindist=1.1, fontname="Helvetica"];
+  node  [fontname="Helvetica", fontsize=12];
+  edge  [fontname="Helvetica", fontsize=10];
+
+  node [shape=box, style="rounded,filled", fillcolor="#E8EEF8"];
+  RS [label="R1: Lock tabel stok\n(1 unit)"];
+  RB [label="R2: Lock transaksi\npembayaran (1 unit)"];
+  RK [label="R3: Slot kurir\n(1 unit)"];
+
+  node [shape=circle, style=filled, fillcolor="#FFF4D6"];
+  PA [label="PA\nCheckout"]; PB [label="PB\nWorker\npembayaran"]; PC [label="PC\nPenjadwal\nkurir"];
+
+  RS -> PA [label="dipegang", penwidth=2];
+  RB -> PB [label="dipegang", penwidth=2];
+  RK -> PC [label="dipegang", penwidth=2];
+
+  edge [style=dashed, color="#C0392B", fontcolor="#C0392B", penwidth=2];
+  PA -> RB [label="menunggu"];
+  PB -> RK [label="menunggu"];
+  PC -> RS [label="menunggu"];
+}

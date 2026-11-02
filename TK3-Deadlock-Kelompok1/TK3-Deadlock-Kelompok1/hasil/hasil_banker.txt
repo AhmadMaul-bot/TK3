@@ -1,0 +1,15 @@
+Need:
+  P0: [7, 4, 3]
+  P1: [1, 2, 2]
+  P2: [6, 0, 0]
+  P3: [0, 1, 1]
+  P4: [4, 3, 1]
+
+Iterasi:
+  1. P1: Need=[1, 2, 2] <= Work=[3, 3, 2] -> selesai, Work baru = Work + Allocation
+  2. P3: Need=[0, 1, 1] <= Work=[5, 3, 2] -> selesai, Work baru = Work + Allocation
+  3. P0: Need=[7, 4, 3] <= Work=[7, 4, 3] -> selesai, Work baru = Work + Allocation
+  4. P2: Need=[6, 0, 0] <= Work=[7, 5, 3] -> selesai, Work baru = Work + Allocation
+  5. P4: Need=[4, 3, 1] <= Work=[10, 5, 5] -> selesai, Work baru = Work + Allocation
+
+Hasil: SAFE, urutan aman: P1 -> P3 -> P0 -> P2 -> P4

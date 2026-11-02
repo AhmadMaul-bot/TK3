@@ -1,0 +1,9 @@
+Permintaan P1: [1, 0, 2]
+  Need P1 = [1, 2, 2], Available = [3, 3, 2]
+  Alokasi sementara -> Available = [2, 3, 0], Allocation P1 = [3, 0, 2], Need P1 = [0, 2, 0]
+  Hasil: AMAN, permintaan DIBERIKAN, urutan aman: P1 -> P3 -> P0 -> P2 -> P4
+
+Permintaan P4: [3, 3, 0]
+  Need P4 = [4, 3, 1], Available = [3, 3, 2]
+  Alokasi sementara -> Available = [0, 0, 2], Allocation P4 = [3, 3, 2], Need P4 = [1, 0, 1]
+  Hasil: TIDAK AMAN, permintaan DITOLAK (proses menunggu)

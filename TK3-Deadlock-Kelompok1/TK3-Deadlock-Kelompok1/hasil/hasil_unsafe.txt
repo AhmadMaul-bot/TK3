@@ -1,0 +1,10 @@
+Need:
+  P0: [7, 4, 3]
+  P1: [1, 2, 2]
+  P2: [6, 0, 0]
+  P3: [0, 1, 1]
+  P4: [4, 3, 1]
+
+Iterasi:
+
+Hasil: UNSAFE, tidak ada urutan aman (proses terjebak: ['P0', 'P1', 'P2', 'P3', 'P4'])
